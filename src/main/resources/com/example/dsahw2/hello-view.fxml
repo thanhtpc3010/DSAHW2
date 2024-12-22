@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.dsahw2.HelloController" spacing="10" alignment="CENTER">
+    <Label text="Nhập thông tin sinh viên" />
+    <HBox spacing="10">
+        <TextField fx:id="nameField" promptText="Họ tên" />
+        <TextField fx:id="ageField" promptText="Tuổi" />
+        <TextField fx:id="scoreField" promptText="Điểm" />
+        <Button text="Thêm" onAction="#onAddButtonClick" />
+    </HBox>
+    <TableView fx:id="studentTable">
+        <columns>
+            <TableColumn fx:id="nameColumn" text="Họ tên" />
+            <TableColumn fx:id="ageColumn" text="Tuổi" />
+            <TableColumn fx:id="scoreColumn" text="Điểm" />
+        </columns>
+    </TableView>
+    <Button text="Sắp xếp theo điểm" onAction="#onSortButtonClick" />
+</VBox>
